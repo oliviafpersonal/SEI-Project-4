@@ -24,6 +24,7 @@ class Mp(models.Model):
     combating_violence_against_women = models.CharField(max_length=20, default='yes')
     relationships_sex_education = models.CharField(max_length=20, default='yes')
     brexit_rural_economy = models.CharField(max_length=20, default='yes')
+    party = models.ManyToManyField("party.party", related_name="mp")
 
 
 
