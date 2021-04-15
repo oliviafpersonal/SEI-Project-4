@@ -23,14 +23,18 @@ const MpShow = () => {
         {mp &&
           <div >
             {mp.map(mp => (
+              <>
 
-              <div className="card" key={mp.name}>
-                <div className="card-header">
-                  <div key={mp.id} className="card-header-title">{mp.location}</div>
+                <h2>{mp.name}</h2>
+                <div className="card" key={mp.name}>
+                  <div className="card-header">
+                    <div key={mp.id} className="card-header-title">{mp.location}</div>
+                    <img src={mp.image} alt={mp.name} />
+                  </div>
+
+
                 </div>
-
-
-              </div>
+              </>
             ))}
           </div>
         }
