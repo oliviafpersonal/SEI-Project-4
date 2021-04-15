@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function App() {
+const App = () => {
+  const [mp, setMp] = useState('')
+  console.log(mp, setMp)
+
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get('api/mp/')
+      setMp(response.data)
+    }
+    getData()
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="columns">
+      <div className="column is-one-quarter-desktop is-one-third-tablet">
+
+        {mp &&
+          <div >
+            {mp.map(mp => (
+
+              <div className="card" key={mp.name}>
+                <div className="card-header">
+                  <div key={mp.id} className="card-header-title">{mp.location}</div>
+                </div>
+
+
+              </div>
+            ))}
+          </div>
+        }
+      </div>
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default App
