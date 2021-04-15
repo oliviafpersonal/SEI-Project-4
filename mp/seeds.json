@@ -25,7 +25,10 @@
     "brexit_air_quality": "Not In Office",
     "combating_violence_against_women": "Not In Office",
     "relationships_sex_education": "Not In Office",
-    "brexit_rural_economy": "Not In Office"
+    "brexit_rural_economy": "Not In Office",
+    "party": [
+      4
+    ]
   }
 },
 {
@@ -54,7 +57,10 @@
     "brexit_air_quality": "Did Not Vote",
     "combating_violence_against_women": "Not In Office",
     "relationships_sex_education": "In Favour",
-    "brexit_rural_economy": "Not In Office"
+    "brexit_rural_economy": "Not In Office",
+    "party": [
+      1
+    ]
   }
 },
 {
@@ -83,7 +89,10 @@
     "brexit_air_quality": "Did Not Vote",
     "combating_violence_against_women": "In Favour",
     "relationships_sex_education": "In Favour",
-    "brexit_rural_economy": "Did Not Vote"
+    "brexit_rural_economy": "Did Not Vote",
+    "party": [
+      2
+    ]
   }
 },
 {
@@ -112,7 +121,10 @@
     "brexit_air_quality": "Against",
     "combating_violence_against_women": "Did Not Vote",
     "relationships_sex_education": "In Favour",
-    "brexit_rural_economy": "Did Not Vote"
+    "brexit_rural_economy": "Did Not Vote",
+    "party": [
+      3
+    ]
   }
 },
 {
@@ -141,7 +153,10 @@
     "brexit_air_quality": "Did Not Vote",
     "combating_violence_against_women": "Did Not Vote",
     "relationships_sex_education": "In Favour",
-    "brexit_rural_economy": "Did Not Vote"
+    "brexit_rural_economy": "Did Not Vote",
+    "party": [
+      1
+    ]
   }
 }
 ]
