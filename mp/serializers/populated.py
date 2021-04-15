@@ -1,7 +1,7 @@
-from comments.serializers.common import CommentSerializer
+from comments.serializers.populated import PopulatedCommentSerializer
 from ..serializers.common import MpSerializer 
 from party.serializers.common import partySerializer
 
 class PopulatedMpSerializer(MpSerializer):
-    comments = CommentSerializer(many=True)
+    comments = PopulatedCommentSerializer(many=True)
     party = partySerializer(many=True)
