@@ -133,7 +133,7 @@
     "fields": {
       "name": "Boris Johnson",
       "location": "Uxbridge and South Ruislip",
-      "image": "https://www.politico.eu/wp-content/uploads/2021/04/08/GettyImages-1180651785-1320x880.jpg",
+      "image": "https://storage.googleapis.com/afs-prod/media/9e5dbbfe6e7c43f1a52a429fa9520576/800.jpeg",
       "free_school_meals": "Against",
       "coronavirus_face_coverings": "Did Not Vote",
       "testing_of_nhs_staff": "Did Not Vote",
