@@ -17,29 +17,7 @@ const MpShow = () => {
 
 
   return (
-    <div className="columns">
-      <div className="column is-one-quarter-desktop is-one-third-tablet">
-
-        {mp &&
-          <div >
-            {mp.map(mp => (
-              <>
-
-                <h2>{mp.name}</h2>
-                <div className="card" key={mp.name}>
-                  <div className="card-header">
-                    <div key={mp.id} className="card-header-title">{mp.location}</div>
-                    <img src={mp.image} alt={mp.name} className="img" />
-                  </div>
-
-
-                </div>
-              </>
-            ))}
-          </div>
-        }
-      </div>
-    </div>
+    <h1>Show Page</h1>
 
   )
 }

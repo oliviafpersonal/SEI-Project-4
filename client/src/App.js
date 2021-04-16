@@ -12,7 +12,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/mps" >
+          <Route exact path="/mps/:id" >
             <MpShow />
           </Route>
           <Route exact path="/login">
@@ -21,7 +21,7 @@ const App = () => {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="mps">
+          <Route exact path="/mps">
             <MpIndex />
           </Route>
         </Switch>
