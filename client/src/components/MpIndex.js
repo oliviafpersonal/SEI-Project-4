@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import Navbar from './Navbar'
+import MpCard from './MpCard'
 
 const MpIndex = () => {
   const [mp, setMp] = useState('')
@@ -19,30 +20,18 @@ const MpIndex = () => {
 
   return (
     <>
-      <Navbar />
+      < Navbar />
 
-      <div className="columns">
-        <div className="column is-one-quarter-desktop is-one-third-tablet">
+      <br />
 
-          {mp &&
-            <div >
-              {mp.map(mp => (
-                <>
-
-                  <h2>{mp.name}</h2>
-                  <div className="card" key={mp.name}>
-                    <div className="card-header">
-                      <div key={mp.id} className="card-header-title">{mp.location}</div>
-                      <img src={mp.image} alt={mp.name} className="img" />
-                    </div>
-
-
-                  </div>
-                </>
-              ))}
-            </div>
-          }
-        </div>
+      <div>
+        {mp &&
+          <div>
+            {mp.map(mp => (
+              <MpCard key={mp.id} {...mp} />
+            ))}
+          </div>
+        }
       </div>
     </>
 
