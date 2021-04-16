@@ -26,7 +26,6 @@ const MpShow = () => {
     <>
       <Navbar />
 
-
       <div className="main-container">
         <div className="profile-content">
           <div className="profile-img">
@@ -41,27 +40,11 @@ const MpShow = () => {
         <hr className="break" />
 
       </div>
+
     </>
 
   )
 }
-/*
-<div className="hero is-medium">
-        <div className="hero-body">
-          <div>
-            <h1>{mp.name}</h1>
-          </div>
 
-
-          <div>
-            <h4>{mp.location}</h4>
-          </div>
-
-          <div className="image-container" >
-            <img src={mp.image} alt="" className="show-image" />
-          </div>
-        </div>
-      </div>
-      */
 
 export default MpShow
