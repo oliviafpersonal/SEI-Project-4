@@ -83,6 +83,10 @@ const Navbar = () => {
                 <a className="button is-focused" onClick={handleLogout}>
                   Log out
                 </a>
+
+                <Link to="/profile" className="button is-focused">
+                  Profile
+                </Link>
               </div>
             </div>
           )}
