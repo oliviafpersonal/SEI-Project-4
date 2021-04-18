@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 const Profile = () => {
+  const [user, setUser] = useState(null)
+
+  const userID = getPayloadFromToken
 
 
 
