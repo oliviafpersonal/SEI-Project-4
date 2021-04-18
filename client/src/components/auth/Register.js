@@ -9,8 +9,6 @@ const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    //first_name: '',
-    //last_name: '',
     password: '',
     password_confirmation: '',
   })

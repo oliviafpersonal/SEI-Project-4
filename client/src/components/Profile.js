@@ -21,10 +21,61 @@ const Profile = () => {
     getData()
   }, [])
 
+  if (!user) return null
 
+  const { username, email, profileImage } = user
 
   return (
-    <h1>Profile</h1>
+    <>
+      <Navbar />
+      {user && (
+
+        <div className="profile-container">
+          <div className="columns">
+            <div className="column">
+              {' '}
+              <div className="profile-box">
+                <img
+                  className="profile-image"
+                  alt="user profile image"
+                  src={profileImage}
+                />
+                <Link to={`/profile/${userID}/edit-profile-image`}>
+                  <div
+                    className="edit-profile-button"
+                    name="edit-profile-image"
+                  >
+                    Change Image
+                  </div>
+                </Link>
+                <hr />
+                <div>
+                  <b>Email</b>
+                </div>
+                <p>{email}</p>
+                <hr />
+
+                <Link to={`/profile/delete-account/${userID}`}>
+                  <button
+                    className="delete-account-button button"
+                    name="delete-profile"
+                  >
+                    Delete My Account
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="column">
+              <div className="username">
+                <h2>{`Hi, i'm ${username}`}</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
+    </>
 
   )
 
