@@ -1,7 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+
+import { userIsAuthenticated } from './helpers/auth'
 
 const Navbar = () => {
+
+  const history = useHistory()
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('token')
+    history.push('/home')
+  }
+
+
+
   return (
     <>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -46,24 +58,34 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="navbar-end">
-            <div className="navbar-item">
+          {!userIsAuthenticated() && (
+            <div className="navbar-end">
+              <div className="navbar-item">
 
 
+                <div className="buttons">
+                  <Link to="/register" className="button is-focused">
+                    Sign Up
+                  </Link>
 
-
-
-              <div className="buttons">
-                <Link to="/register" className="button is-focused">
-                  Sign Up
-                </Link>
-
-                <Link to="/login" className="button is-focused">
-                  Log in
-                </Link>
+                  <Link to="/login" className="button is-focused">
+                    Log in
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          )}
+
+          {userIsAuthenticated() && (
+            <div className="navbar-end">
+              <div className="navbar-item">
+
+                <a className="button is-focused" onClick={handleLogout}>
+                  Log out
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </>
