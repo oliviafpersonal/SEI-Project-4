@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
 
-          <Link to="/home" className="navbar-item">
+          <Link to="/mps" className="navbar-item">
             Know You Mp
           </Link>
 

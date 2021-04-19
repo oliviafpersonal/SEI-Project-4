@@ -25,6 +25,8 @@ const MpShow = () => {
 
   if (!mp) return null
   const { name, image, location, free_school_meals: freeSchoolMeals, coronavirus_face_coverings: coronaFaceCoverings, testing_of_nhs_staff: testingOfNhsStaff, police_crime_sentencing: policeCrimeSentencing, immigration_and_social_security: immigrationAndSocialSecurity, environment_bill: environmentalBill, european_union_withdrawal: europeanUnionWithdrawal, domestic_abuse_bill: domesticAbuseBill, nhs_pay_award: nhsPayAward, the_agriculture_act: theAgriculturalAct, offensive_weapons_report_nc26: offensiveWeaponsReport, windrush, unaccompanied_children: unaccompaniedChildren, trade_bill: tradeBill, financial_assitance_to_industry: financialAssistanceToIndustry, health_protection: healthProtection, brexit_air_quality: brexitAirQuality, combating_violence_against_women: combatingViolenceAgainstWomen, relationships_sex_education: relationshipSexEducation, brexit_rural_economy: brexitRuralEconomy } = mp
+
+
   return (
     <>
       <Navbar />
@@ -34,9 +36,9 @@ const MpShow = () => {
           <div className="profile-img">
             <img src={image} alt="mp" />
             <div className="name">
-              <h2>{name}</h2>
-              <span>{location}</span>
-              <h4>{mp.party[0].name}</h4>
+              <h2>Name: {name}</h2>
+              <span>Constituency: {location}</span>
+              <h4>Party: {mp.party[0].name}</h4>
             </div>
           </div>
         </div>
@@ -148,6 +150,13 @@ const MpShow = () => {
             <p>{brexitRuralEconomy}</p>
           </div>
 
+        </div>
+
+        <h4>Comments:</h4>
+
+        <div>
+          <p>{mp.comments[0].text}</p>
+          <p>{mp.comments[0].owner.username}</p>
         </div>
 
       </div>
