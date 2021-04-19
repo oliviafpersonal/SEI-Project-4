@@ -17,14 +17,14 @@
   "model": "party.party",
   "pk": 3,
   "fields": {
-    "name": "Independent"
+    "name": "Liberal Democrats"
   }
 },
 {
   "model": "party.party",
   "pk": 4,
   "fields": {
-    "name": "Liberal Democrats"
+    "name": "Independent"
   }
 }
 ]
