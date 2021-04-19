@@ -36,110 +36,114 @@ const MpShow = () => {
             <div className="name">
               <h2>{name}</h2>
               <span>{location}</span>
+              <h4>{mp.party[0].name}</h4>
             </div>
           </div>
         </div>
 
         <hr className="break" />
 
-        <div>
-          <h2>Voting History:</h2>
-          <br />
-          <div>
+
+        <h2>Voting History:</h2>
+        <br />
+        <div className="voting-section">
+
+          <div className="voting-history">
             <h4>Opposition Motion: Free School Meals</h4>
             <p>{freeSchoolMeals}</p>
           </div>
-          <div>
+
+          <div className="voting-history">
             <h4>The Health Protection: Coronavirus, Wearing of Face Coverings in a Relevant Place</h4>
             <p>{coronaFaceCoverings}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Opposition Motion: Testing of NHS and Social Care Staff</h4>
             <p>{testingOfNhsStaff}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Police, Crime, Sentencing and Courts Bill: Second Reading</h4>
             <p>{policeCrimeSentencing}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Immigration and Social Security Co-ordination (EU Withdrawal) Bill: Second Reading</h4>
             <p>{immigrationAndSocialSecurity}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Environmental Bill Report: Stage: New Clause 1</h4>
             <p>{environmentalBill}</p>
           </div>
 
-          <div>
-            <h4>European Union (Notification of Wtihdrawl) Bill: Second Reading</h4>
+          <div className="voting-history">
+            <h4>European Union (Notification of Wtihdrawal) Bill: Second Reading</h4>
             <p>{europeanUnionWithdrawal}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Domestic Abuse Bill Report Stage: New Clause 23</h4>
             <p>{domesticAbuseBill}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Ten Minute Rule Motion: NHS Pay Award (Report)</h4>
             <p>{nhsPayAward}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Agriculture Bill: Lords Amendment 16B Motion to disagree</h4>
             <p>{theAgriculturalAct}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Offensive Weapons - Report - NC26</h4>
             <p>{offensiveWeaponsReport}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Opposition Motion: Windrush</h4>
             <p>{windrush}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Unaccompanied Children in Greece and Italy</h4>
             <p>{unaccompaniedChildren}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>International Trade and Development Agency Bill</h4>
             <p>{tradeBill}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Financial Assistance to Industry</h4>
             <p>{financialAssistanceToIndustry}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Health Protection (Coronavirus Restrictions) (All Tiers) (England) Regulations 2020</h4>
             <p>{healthProtection}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Exiting the European Union (Air Quality)</h4>
             <p>{brexitAirQuality}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Preventing and Combating Violence Against Women and Domestic Violence (Ratification of Convention) Bill: Third Reading</h4>
             <p>{combatingViolenceAgainstWomen}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Draft Relationship Education, Relationships and Sex Education and Health Education (England) Regulations 2019</h4>
             <p>{relationshipSexEducation}</p>
           </div>
 
-          <div>
+          <div className="voting-history">
             <h4>Opposition Motion: Effect of the UK leaving the EU on the rural economy</h4>
             <p>{brexitRuralEconomy}</p>
           </div>

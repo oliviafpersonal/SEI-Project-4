@@ -176,5 +176,24 @@ body {
   opacity: 0.5;
 }
 
+.voting-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+
+.voting-history {
+  border: black 2px solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  //align-items: flex-start;
+  align-content: flex-start;
+
+}
+
 
 
