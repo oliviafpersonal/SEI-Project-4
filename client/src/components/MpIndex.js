@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+
+
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -6,7 +9,7 @@ import MpCard from './MpCard'
 
 const MpIndex = () => {
   const [mp, setMp] = useState('')
-  console.log(mp, setMp)
+
 
 
   useEffect(() => {
@@ -18,6 +21,8 @@ const MpIndex = () => {
   }, [])
 
 
+
+
   return (
     <>
       < Navbar />
@@ -25,6 +30,7 @@ const MpIndex = () => {
       <br />
 
       <div>
+
         {mp &&
           <div>
             {mp.map(mp => (

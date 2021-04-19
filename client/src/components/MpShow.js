@@ -151,13 +151,14 @@ const MpShow = () => {
           </div>
 
         </div>
-
+        {/* 
         <h4>Comments:</h4>
 
         <div>
           <p>{mp.comments[0].text}</p>
           <p>{mp.comments[0].owner.username}</p>
         </div>
+        */}
 
       </div>
 
