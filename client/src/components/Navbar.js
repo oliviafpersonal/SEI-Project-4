@@ -1,9 +1,57 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+
+
+import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import axios from 'axios'
 
 import { userIsAuthenticated } from './helpers/auth'
 
 const Navbar = () => {
+  const [searchValues, setSearchValues] = useState({
+    searchMps: '',
+  })
+  console.log(searchValues, setSearchValues)
+  const [mp, setMp] = useState('')
+  console.log(mp, setMp)
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get('api/mp/')
+      setMp(response.data)
+    }
+    getData()
+  }, [])
+
+  const handleChange = (event) => {
+    const newSearchValues = {
+      ...searchValues,
+      [event.target.name]: event.target.value,
+    }
+    setSearchValues(newSearchValues)
+  }
+
+  const navigateToSearched = (id) => {
+    history.push(`/mps/${id}`)
+  }
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const mpResult = searchValues.searchMps
+
+    //if (mpResult === '' && mpResult === '') return null
+    //if (mpResult !== '' && mpResult !== '')
+
+    if (mpResult === '') navigateToSearched(mpResult)
+
+  }
+
+
+
+
+
+
 
   const history = useHistory()
 
@@ -51,6 +99,51 @@ const Navbar = () => {
                 <Link to="/contact" className="navbar-item">
                   Contact
                 </Link>
+
+                <form onSubmit={handleSubmit}>
+                  <div className="field has-addons">
+                    <div className="control">
+                      <input className="input" type="text" placeholder="Find your MP" onChange={handleChange} />
+                    </div>
+                    <div className="control">
+                      <a className="button is-info">
+                        Search
+                      </a>
+                    </div>
+                  </div>
+                </form>
+
+
+
+                {/*
+                <div className="search-bar">
+                  <form className="search-container" onSubmit={handleSubmit}>
+                    <div className="location">
+                      <label className="location-label">MP</label>
+                      <input
+                        placeholder="Who's Your MP?"
+                        className="search-input"
+                        name="searchCity"
+                        onChange={handleChange}
+                      ></input>
+                    </div>
+                    <div className="search-divider"></div>
+              <div className="location">
+                <label className="location-label">Search Mps</label>
+                <input
+                  placeholder="Got a specific pub in mind?"
+                  className="search-input"
+                  name="searchPubs"
+                  onChange={handleChange}
+                ></input>
+              </div>
+              
+                    <button className="search-button button">Search</button>
+                  </form>
+                </div>
+*/ }
+
+
 
 
                 <hr className="navbar-divider" />
