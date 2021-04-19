@@ -8,7 +8,7 @@ from .serializers.common import CommentSerializer
 from .models import Comment 
 
 class CommentListView(APIView):
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     def post(self, request):
         #request.data["owner"] = request.user.id 
