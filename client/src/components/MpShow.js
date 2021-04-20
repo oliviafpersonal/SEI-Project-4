@@ -4,12 +4,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import { userIsAuthenticated } from '../components/helpers/auth'
 
 import Navbar from './Navbar'
 import Comment from './Comment'
+import { number } from 'prop-types'
 
 const MpShow = () => {
   const [mp, setMp] = useState('')
+  const [like, setLike] = useState(0)
+
   console.log(mp, setMp)
 
   const { id } = useParams()
@@ -27,6 +31,12 @@ const MpShow = () => {
   if (!mp) return null
   const { name, image, location, free_school_meals: freeSchoolMeals, coronavirus_face_coverings: coronaFaceCoverings, testing_of_nhs_staff: testingOfNhsStaff, police_crime_sentencing: policeCrimeSentencing, immigration_and_social_security: immigrationAndSocialSecurity, environment_bill: environmentalBill, european_union_withdrawal: europeanUnionWithdrawal, domestic_abuse_bill: domesticAbuseBill, nhs_pay_award: nhsPayAward, the_agriculture_act: theAgriculturalAct, offensive_weapons_report_nc26: offensiveWeaponsReport, windrush, unaccompanied_children: unaccompaniedChildren, trade_bill: tradeBill, financial_assitance_to_industry: financialAssistanceToIndustry, health_protection: healthProtection, brexit_air_quality: brexitAirQuality, combating_violence_against_women: combatingViolenceAgainstWomen, relationships_sex_education: relationshipSexEducation, brexit_rural_economy: brexitRuralEconomy, comments } = mp
 
+
+
+
+  const liked = () => {
+    setLike(like + 1)
+  }
 
   return (
     <>
@@ -55,6 +65,12 @@ const MpShow = () => {
             <h4>Opposition Motion: Free School Meals</h4>
             <p>{freeSchoolMeals}</p>
           </div>
+          {userIsAuthenticated() && (
+            <>
+              <button onClick={liked}>👍🏼</button>
+              <p>Likes: {like}</p>
+            </>
+          )}
 
           <div className="voting-history">
             <h4>The Health Protection: Coronavirus, Wearing of Face Coverings in a Relevant Place</h4>
