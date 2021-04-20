@@ -30,6 +30,17 @@ const MpIndex = () => {
   }, [])
 
 
+  const handleAll = () => {
+    setTory(1)
+    setLabour(2)
+    setLibdem(3)
+    setIndependent(4)
+  }
+
+
+
+
+
   const handleTory = () => {
     if (!tory) {
       setTory(1)
@@ -103,6 +114,14 @@ const MpIndex = () => {
       < Navbar />
 
       <br />
+
+      {/* 
+      <div className="filter-mps">
+        <button className="button" onClick={handleAll} >
+          All
+        </button>
+      </div>
+*/}
 
       <div className="filter-mps">
         <button className="button" onClick={handleTory}>

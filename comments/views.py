@@ -13,7 +13,6 @@ class CommentListView(APIView):
     def post(self, request):
         request.data["owner"] = request.user.id 
         comment_to_create = CommentSerializer(data=request.data)
-        #request.data["owner"] = request.user.id
         if comment_to_create.is_valid():
             comment_to_create.save()
             return Response(comment_to_create.data, status=status.HTTP_201_CREATED)
