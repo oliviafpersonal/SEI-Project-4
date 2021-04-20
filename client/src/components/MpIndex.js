@@ -31,10 +31,10 @@ const MpIndex = () => {
 
 
   const handleAll = () => {
-    setTory(1)
-    setLabour(2)
-    setLibdem(3)
-    setIndependent(4)
+    setTory(null)
+    setLabour(null)
+    setLibdem(null)
+    setIndependent(null)
   }
 
 
@@ -105,23 +105,19 @@ const MpIndex = () => {
   const isIndependent = mp.filter((mp) => mp.party[0].id === 4)
 
 
-
-
-
-
   return (
     <>
       < Navbar />
 
       <br />
 
-      {/* 
+
       <div className="filter-mps">
         <button className="button" onClick={handleAll} >
           All
         </button>
       </div>
-*/}
+
 
       <div className="filter-mps">
         <button className="button" onClick={handleTory}>

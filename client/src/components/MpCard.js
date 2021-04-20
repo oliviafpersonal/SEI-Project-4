@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MpCard = ({ id, name, image, location }) => {
+const MpCard = ({ id, name, image, location, comments }) => {
   return (
 
 
