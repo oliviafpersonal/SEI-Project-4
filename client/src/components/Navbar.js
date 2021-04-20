@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
-    history.push('/home')
+    history.push('/mps')
   }
 
 
