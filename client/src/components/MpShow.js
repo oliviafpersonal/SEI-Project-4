@@ -79,31 +79,7 @@ const MpShow = () => {
 
         <hr className="break" />
 
-        <h1>Comments:</h1>
-        <div className="comments-section">
-          {
-            comments.map((comment) => (
-              <div className=" card" key={comment.owner.id}>
-                <div className="card-content"> 
-                  <div className="media">
-                    <div className="media-left">
-                      <img className="image is-48x48"src={comment.owner.photo} alt="user profile image"/>
-                    </div>
-                    <div className="media-content">
-                      <h2 className="title is-4">{comment.owner.username}</h2>
-                      <p className="subtitle is-6">{comment.text}</p>
-                </div>
-              <br/>
-
-              </div>
-              </div>
-            </div>
-          ))
-        }
-        </div>
-
-        
-
+      
         <h1>Voting History:</h1>
         <br />
         <div className="voting-section">
@@ -115,12 +91,7 @@ const MpShow = () => {
             </div>
           </a>
 
-          {userIsAuthenticated() && (
-            <>
-              <button onClick={liked}>👍🏼</button>
-              <p>Likes: {like}</p>
-            </>
-          )}
+
 
           <a href="https://www.legislation.gov.uk/uksi/2020/882/contents/made">
             <div className="voting-history">
@@ -261,6 +232,27 @@ const MpShow = () => {
         {userIsAuthenticated() && (
           <Comment />
           )}
+
+        <h1>Comments:</h1>
+        <div className="comments-section">
+          {
+            comments.map((comment) => (
+              <div className=" card" key={comment.owner.id}>
+                <div className="card-content"> 
+                  <div className="media">
+                    <div className="media-left">
+                      <img className="image is-48x48"src={comment.owner.photo} alt="user profile image"/>
+                    </div>
+                    <div className="media-content">
+                      <h2 className="title is-4">{comment.owner.username}</h2>
+                      <p className="subtitle is-6">{comment.text}</p>
+                    </div>
+                  </div>
+              </div>
+               </div>
+            ))
+          }
+        </div>
         
       </div>
       </>
