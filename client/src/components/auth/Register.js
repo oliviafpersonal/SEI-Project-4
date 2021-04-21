@@ -59,7 +59,7 @@ const Register = () => {
                 <label className="label">Username</label>
                 <div className="control">
                   <input
-                    className="input is-danger"
+                    className="input "
                     placeholder="Username"
                     name="username"
                     value={formData.username}
@@ -74,7 +74,7 @@ const Register = () => {
                 <label className="label">Email</label>
                 <div className="control">
                   <input
-                    className="input is-danger"
+                    className="input "
                     placeholder="Email"
                     name="email"
                     value={formData.email}
@@ -83,15 +83,11 @@ const Register = () => {
                 </div>
               </div>
 
-
-
-
-
               <div className="field">
                 <label className="label">Password</label>
                 <div className="control">
                   <input
-                    className="input is-danger"
+                    className="input "
                     type="password"
                     placeholder="Password"
                     name="password"
@@ -105,7 +101,7 @@ const Register = () => {
                 <label className="label">Password Confirmation</label>
                 <div className="control">
                   <input
-                    className="input is-danger"
+                    className="input "
                     type="password"
                     placeholder="Password Confirmation"
                     name="password_confirmation"

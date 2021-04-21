@@ -31,49 +31,65 @@ const Login = () => {
       <Navbar />
       {!userIsAuthenticated() && (
         <div className="login-container">
+
+
           <section className="section">
             <div className="container">
               <div className="columns">
-                <div className="column ">
-                  <form className="login-box" onSubmit={handleSubmit}>
-                    <h2>Login here</h2>
-                    <hr />
-                    <div className="login-input-box">
+
+
+
+                <form className="column is-half is-offset-one-quarter box"
+                  onSubmit={handleSubmit}>
+
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control">
                       <input
-                        className="login-input"
+                        className="input "
                         placeholder="Email"
                         name="email"
-                        onChange={handleChange}
                         value={formData.email}
+                        onChange={handleChange}
                       />
                     </div>
-                    <div className="login-input-box-pass">
+                  </div>
+
+
+                  <div className="field">
+                    <label className="label">Password</label>
+                    <div className="control">
                       <input
-                        onChange={handleChange}
-                        className="login-input"
+                        className="input "
                         type="password"
                         placeholder="Password"
                         name="password"
                         value={formData.password}
+                        onChange={handleChange}
                       />
                     </div>
+                  </div>
 
-                    <div className="field">
-                      <hr />
-                      <button
-                        type="submit"
-                        className="button login-button is-fullwidth "
-                      >
-                        Log Me In!
-                      </button>
-                    </div>
-                  </form>
-                </div>
+
+
+                  <div className="field">
+                    <hr />
+                    <button
+                      type="submit"
+                      className="button login-button is-fullwidth "
+                    >
+                      Log Me In!
+                    </button>
+                  </div>
+                </form>
+
                 <div className="column">
                 </div>
+
               </div>
             </div>
           </section>
+
         </div>
       )}
       {userIsAuthenticated() && (
