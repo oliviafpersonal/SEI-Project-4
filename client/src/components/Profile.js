@@ -46,19 +46,13 @@ const Profile = () => {
                     src={photo}
                   />
 
-                  <hr />
-                  <div>
-                    <b>Email</b>
-                  </div>
-                  <p>{email}</p>
-                  <hr />
-
                 </div>
               </div>
 
               <div className="column">
                 <div className="username">
                   <h2>{`Hi, i'm ${username}`}</h2>
+                  <h2>{`Email ${email}`}</h2>
                 </div>
 
               </div>

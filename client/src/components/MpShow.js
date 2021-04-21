@@ -121,7 +121,7 @@ const MpShow = () => {
             </div>
           </a>
 
-          <a href="https://hansard.parliament.uk/commons/2021-01-26/debates/20CFA026-8E78-4D84-82E4-B4236D826AA4/EnvironmentBill"> 
+          <a href="https://hansard.parliament.uk/commons/2021-01-26/debates/20CFA026-8E78-4D84-82E4-B4236D826AA4/EnvironmentBill" target='blank'> 
             <div className="voting-history">
               <h4><strong>Environmental Bill Report: Stage: New Clause 1:</strong></h4>
               <p>{environmentalBill}</p>
