@@ -3,6 +3,8 @@ import axios from 'axios'
 import Navbar from '../Navbar'
 import { useHistory } from 'react-router'
 
+import { ImageUploadField } from '../ImageUploadField'
+
 const Register = () => {
   const history = useHistory()
 
@@ -11,6 +13,7 @@ const Register = () => {
     email: '',
     password: '',
     password_confirmation: '',
+    photo: '',
   })
   /*
     const [errors, setErrors] = useState({
@@ -35,7 +38,10 @@ const Register = () => {
       console.log(err.response)
       //setErrors(err.response.data.errors)
     }
+  }
 
+  const handleImageUrl = url => {
+    setFormData({ ...formData, photo: url })
   }
 
 
@@ -44,7 +50,7 @@ const Register = () => {
       <Navbar />
       <section className="section">
         <div className="container">
-          <div className="columns">
+          <div className="register-columns">
             <form
               className="column is-half is-offset-one-quarter box"
               onSubmit={handleSubmit}
@@ -107,6 +113,12 @@ const Register = () => {
                     onChange={handleChange}
                   />
                 </div>
+
+                <ImageUploadField
+                  value={formData.photo}
+                  name='profile'
+                  handleImageUrl={handleImageUrl}
+                />
 
               </div>
               <div className="field">

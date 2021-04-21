@@ -1,10 +1,11 @@
-/*eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars, indent */
 
 import React, { useEffect, useState } from 'react'
 import { getPayloadFromToken } from '../components/helpers/auth'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+import { ImageUploadField } from '../components/ImageUploadField'
 import Navbar from '../components/Navbar'
 
 const Profile = () => {
@@ -19,11 +20,14 @@ const Profile = () => {
       setUser(response.data)
     }
     getData()
+
+
   }, [])
+
 
   if (!user) return null
 
-  const { username, email, profileImage } = user
+  const { username, email, photo } = user
 
   return (
     <>
@@ -38,8 +42,9 @@ const Profile = () => {
                 <img
                   className="profile-image"
                   alt="user profile image"
-                  src={profileImage}
+                  src={photo}
                 />
+                {/* 
                 <Link to={`/profile/${userID}/edit-profile-image`}>
                   <div
                     className="edit-profile-button"
@@ -48,6 +53,8 @@ const Profile = () => {
                     Change Image
                   </div>
                 </Link>
+              */}
+
                 <hr />
                 <div>
                   <b>Email</b>
@@ -55,6 +62,8 @@ const Profile = () => {
                 <p>{email}</p>
                 <hr />
 
+
+                {/* 
                 <Link to={`/profile/delete-account/${userID}`}>
                   <button
                     className="delete-account-button button"
@@ -63,6 +72,8 @@ const Profile = () => {
                     Delete My Account
                   </button>
                 </Link>
+                */}
+
               </div>
             </div>
 
