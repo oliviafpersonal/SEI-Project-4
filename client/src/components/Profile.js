@@ -27,7 +27,7 @@ const Profile = () => {
 
   if (!user) return null
 
-  const { username, email, photo } = user
+  const { username, email, photo, comments } = user
 
   return (
     <>
@@ -45,16 +45,6 @@ const Profile = () => {
                     alt="user profile image"
                     src={photo}
                   />
-                  {/* 
-                <Link to={`/profile/${userID}/edit-profile-image`}>
-                  <div
-                    className="edit-profile-button"
-                    name="edit-profile-image"
-                  >
-                    Change Image
-                  </div>
-                </Link>
-              */}
 
                   <hr />
                   <div>
@@ -62,18 +52,6 @@ const Profile = () => {
                   </div>
                   <p>{email}</p>
                   <hr />
-
-
-                  {/* 
-                <Link to={`/profile/delete-account/${userID}`}>
-                  <button
-                    className="delete-account-button button"
-                    name="delete-profile"
-                  >
-                    Delete My Account
-                  </button>
-                </Link>
-                */}
 
                 </div>
               </div>
@@ -85,6 +63,7 @@ const Profile = () => {
 
               </div>
             </div>
+            
           </div>
         )}
       </div>

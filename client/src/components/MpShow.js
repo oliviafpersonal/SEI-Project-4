@@ -63,6 +63,17 @@ const MpShow = () => {
         </div>
 
         <hr className="break" />
+{/*
+        <h1>Comments:</h1>
+        {mp.map((mp) => {
+          <>
+            <p>{comments.text}</p>
+            <h2>{comments.owner.username}</h2>
+          </>
+        })}
+         */ }
+        
+        
 
 
         <h1>Voting History:</h1>

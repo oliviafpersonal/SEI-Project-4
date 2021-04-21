@@ -9,15 +9,21 @@ import { getTokenFromLocalStorage } from '../components/helpers/auth'
 
 const Comment = () => {
   const history = useHistory()
+  const { id } = useParams()
 
   const [formData, setFormData] = useState({
     text: '',
+    mp: 0,
   })
 
-  const { id } = useParams()
 
   const handleChange = (event) => {
-    const newFormData = { ...formData, [event.target.name]: event.target.value }
+    //const newFormData = { ...formData, [event.target.name]: event.target.value }
+    const newFormData = {
+      text: event.target.value,
+      mp: `${id}`,
+    }
+    console.log(newFormData)
     setFormData(newFormData)
   }
 
@@ -25,7 +31,7 @@ const Comment = () => {
     console.log(formData)
     event.preventDefault()
     try {
-      const response = await axios.post('/api/comments/', formData, {
+      const response = await axios.post('/api/comments/', formData,  {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
