@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, Link } from 'react-router-dom'
-import { userIsAuthenticated } from '../components/helpers/auth'
+import { userIsAuthenticated, getTokenFromLocalStorage } from '../components/helpers/auth'
 
 import Navbar from './Navbar'
 import Comment from './Comment'
@@ -12,6 +12,8 @@ import Comment from './Comment'
 const MpShow = () => {
   const [mp, setMp] = useState('')
   const [like, setLike] = useState(0)
+
+  const [comment, setComment] = useState('')
 
   console.log(mp, setMp)
 
@@ -25,6 +27,19 @@ const MpShow = () => {
       setMp(response.data)
     }
     getData()
+  }, [])
+
+  useEffect(() => {
+    const getComments = async () => {
+      const response = await axios.get('/api/comments', {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      console.log(response)
+      setComment(response.data)
+    }
+    getComments()
   }, [])
 
   if (!mp) return null
@@ -63,18 +78,19 @@ const MpShow = () => {
         </div>
 
         <hr className="break" />
-{/*
-        <h1>Comments:</h1>
-        {mp.map((mp) => {
-          <>
-            <p>{comments.text}</p>
-            <h2>{comments.owner.username}</h2>
-          </>
-        })}
-         */ }
-        
-        
 
+        <h1>Comments:</h1>
+        {
+          comments.map((comment) => (
+            <div className="comment-box" key={comment.owner.id}>
+              <img src={comment.owner.photo} alt="user profile image"/>
+              <h2>{comment.owner.username}</h2>
+              <p>{comment.text}</p>
+              <br/>
+            </div>
+          ))
+        }
+        
 
         <h1>Voting History:</h1>
         <br />

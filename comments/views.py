@@ -8,8 +8,14 @@ from .serializers.common import CommentSerializer
 from .models import Comment 
 
 class CommentListView(APIView):
-    permission_classes = (IsAuthenticated,)
+    
 
+    def get(self, _request):
+        comments = Comment.objects.all()
+        serialized_comments = CommentSerializer(comments, many=True)
+        return Response(serialized_comments.data, status=status.HTTP_200_OK)
+
+    permission_classes = (IsAuthenticated,)
     def post(self, request):
         request.data["owner"] = request.user.id 
         comment_to_create = CommentSerializer(data=request.data)
@@ -30,4 +36,15 @@ class CommentDetailView(APIView):
             raise PermissionDenied()
         comment_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def get_comment(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+        except Comment.DoesNotExist:
+            raise NotFound(detail="Cannot find that comment")
+
+    def get(self, _request, pk):
+        comment = self.get_comment(pk=pk)
+        serialized_comments = CommentSerializer(comment)
+        return Response(serialized_comments.data, status=status.HTTP_200_OK)
 
