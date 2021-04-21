@@ -110,51 +110,53 @@ const MpIndex = () => {
       < Navbar />
 
       <br />
-
-
-      <div className="filter-mps">
-        <button className="filter-button button" onClick={handleAll} >
-          All
-        </button>
-      </div>
-
-
-      <div className="filter-mps">
-        <button className="filter-button button tory-fill" onClick={handleTory}>
-          Tory
-        </button>
-      </div>
-
-      <div className="filter-mps">
-        <button className="filter-button button labour-fill" onClick={handleLabour}>
-          Labour
-        </button>
-      </div>
-
-      <div className="filter-mps">
-        <button className="filter-button button libdem-fill" onClick={handleLibdem}>
-          Liberal Democrats
-        </button>
-      </div>
-
-      <div className="filter-mps">
-        <button className="filter-button button independent-fill" onClick={handleIndependent}>
-          Independent
-        </button>
-      </div>
-
       <div>
-        {
-          (tory ? isTory
-            : labour ? isLabour
-              : libdem ? isLibdem
-                : independent ? isIndependent
-                  : mp).map(
-                    (mp) => (
-                      <MpCard key={mp.id} {...mp} />
+
+
+        <div className="filter-mps">
+          <button className="filter-button button" onClick={handleAll} >
+            All
+        </button>
+        </div>
+
+
+        <div className="filter-mps">
+          <button className="filter-button button tory-fill" onClick={handleTory}>
+            Tory
+        </button>
+        </div>
+
+        <div className="filter-mps">
+          <button className="filter-button button labour-fill" onClick={handleLabour}>
+            Labour
+        </button>
+        </div>
+
+        <div className="filter-mps">
+          <button className="filter-button button libdem-fill" onClick={handleLibdem}>
+            Liberal Democrats
+        </button>
+        </div>
+
+        <div className="filter-mps">
+          <button className="filter-button button independent-fill" onClick={handleIndependent}>
+            Independent
+        </button>
+        </div>
+
+        <div>
+          {
+            (tory ? isTory
+              : labour ? isLabour
+                : libdem ? isLibdem
+                  : independent ? isIndependent
+                    : mp).map(
+                      (mp) => (
+                        <MpCard key={mp.id} {...mp} />
+                      )
                     )
-                  )
-        }
+          }
+        </div>
       </div>
     </>
 
