@@ -120,25 +120,25 @@ const MpIndex = () => {
 
 
       <div className="filter-mps">
-        <button className="filter-button button" onClick={handleTory}>
+        <button className="filter-button button tory-fill" onClick={handleTory}>
           Tory
         </button>
       </div>
 
       <div className="filter-mps">
-        <button className="filter-button button" onClick={handleLabour}>
+        <button className="filter-button button labour-fill" onClick={handleLabour}>
           Labour
         </button>
       </div>
 
       <div className="filter-mps">
-        <button className="filter-button button" onClick={handleLibdem}>
+        <button className="filter-button button libdem-fill" onClick={handleLibdem}>
           Liberal Democrats
         </button>
       </div>
 
       <div className="filter-mps">
-        <button className="filter-button button" onClick={handleIndependent}>
+        <button className="filter-button button independent-fill" onClick={handleIndependent}>
           Independent
         </button>
       </div>

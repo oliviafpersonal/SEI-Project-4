@@ -34,6 +34,79 @@ body {
   height: 30px;
 }
 
+
+.tory-fill:hover {
+  background-color: #0087DC;
+}
+.tory-fill:before {
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+.tory-fill:hover:before {
+  top: 0;
+}
+
+.labour-fill:hover {
+  background-color: #E4003B;
+}
+.labour-fill:before {
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+.labour-fill:hover:before {
+  top: 0;
+}
+
+.libdem-fill:hover {
+  background-color: #FAA61A ;
+}
+.libdem-fill:before {
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+.libdem-fill:hover:before {
+  top: 0;
+}
+
+.independent-fill:hover {
+  background-color: #DDDDDD;
+}
+.independent-fill:before {
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+.independent-fill:hover:before {
+  top: 0;
+}
+
+
+
+
+
 .rows{
   display: inline-flex;
   flex-direction: row;
@@ -137,14 +210,7 @@ button::-moz-focus-inner {
 // ! show 
 
 
-body {
-  //background-color: #f3f3f2;
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //justify-content: center;
-  //height: 100vh;
-}
+
 
 .main-container {
   background-color: #fff;
@@ -153,7 +219,7 @@ body {
   max-width: 100%;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 3px 5px 2px rgba(212, 208, 208, 0.2);
+  box-shadow: 5px 5px 5px 5px rgba(212, 208, 208, 0.2);
   
 }
 
@@ -186,7 +252,7 @@ body {
 }
 
 .voting-section {
-  display: flex;
+
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -194,13 +260,15 @@ body {
 }
 
 .voting-history {
-  border: black 2px solid;
-  display: flex;
+  border: black 1px solid;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  //align-items: flex-start;
   align-content: flex-start;
+
+  margin: 5px;
+  border-radius: 15px ;
+  padding-left: 15px;
 
 }
 
