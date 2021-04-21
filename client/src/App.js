@@ -6,6 +6,7 @@ import MpIndex from './components/MpIndex'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Profile from './components/Profile'
+import About from './components/About'
 
 const App = () => {
 
@@ -27,6 +28,9 @@ const App = () => {
           </Route>
           <Route exact path="/profile">
             <Profile />
+          </Route>
+          <Route>
+            <About exact path="/about"/>
           </Route>
         </Switch>
       </BrowserRouter>

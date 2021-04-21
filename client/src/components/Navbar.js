@@ -50,9 +50,6 @@ const Navbar = () => {
                 </Link>
 
 
-                <Link to="/contact" className="navbar-item">
-                  Contact
-                </Link>
                 <hr className="navbar-divider" />
               </div>
             </div>
