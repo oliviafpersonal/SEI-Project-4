@@ -35,7 +35,7 @@ const Login = () => {
 
           <section className="section">
             <div className="container">
-              <div className="columns">
+              <div className="register-columns">
 
 
 
