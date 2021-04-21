@@ -80,17 +80,18 @@ const MpShow = () => {
         <hr className="break" />
 
         <h1>Comments:</h1>
-        {
-          comments.map((comment) => (
-            <div className=" card" key={comment.owner.id}>
-              <div className="card-content"> 
-                <div className="media">
-                  <div className="media-left">
-                    <img className="image is-48x48"src={comment.owner.photo} alt="user profile image"/>
-                  </div>
-                  <div className="media-content">
-                    <h2 className="title is-4">{comment.owner.username}</h2>
-                    <p className="subtitle is-6">{comment.text}</p>
+        <div className="comments-section">
+          {
+            comments.map((comment) => (
+              <div className=" card" key={comment.owner.id}>
+                <div className="card-content"> 
+                  <div className="media">
+                    <div className="media-left">
+                      <img className="image is-48x48"src={comment.owner.photo} alt="user profile image"/>
+                    </div>
+                    <div className="media-content">
+                      <h2 className="title is-4">{comment.owner.username}</h2>
+                      <p className="subtitle is-6">{comment.text}</p>
                 </div>
               <br/>
 
@@ -99,6 +100,7 @@ const MpShow = () => {
             </div>
           ))
         }
+        </div>
 
         
 

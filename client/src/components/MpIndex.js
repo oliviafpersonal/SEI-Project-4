@@ -122,7 +122,7 @@ const MpIndex = () => {
 
         <div className="filter-mps">
           <button className="filter-button button tory-fill" onClick={handleTory}>
-            Tory
+            Conservative
         </button>
         </div>
 

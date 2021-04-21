@@ -277,20 +277,12 @@ button::-moz-focus-inner {
 }
 
 //! comments on mp page
-.comment-box {
-  border: solid black 2px;
-
+.comments-section {
+  display: inline-flex;
 }
 
-.comment-box-image {
-  width: 50px;
-  border: none;
-  height: 40px;
-}
-
-.comment-box-right {
-  display: inline-block;
-  margin: 4px;
+.card {
+  width: 400px;
 }
 
 // ! register 

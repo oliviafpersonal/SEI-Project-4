@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="navbar-brand">
 
           <Link to="/mps" className="navbar-item">
-            Know You Mp
+            Know Your Mp
           </Link>
 
           <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
