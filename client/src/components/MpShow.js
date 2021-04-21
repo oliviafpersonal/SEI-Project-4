@@ -83,9 +83,11 @@ const MpShow = () => {
         {
           comments.map((comment) => (
             <div className="comment-box" key={comment.owner.id}>
-              <img src={comment.owner.photo} alt="user profile image"/>
-              <h2>{comment.owner.username}</h2>
-              <p>{comment.text}</p>
+              <img className="comment-box-image"src={comment.owner.photo} alt="user profile image"/>
+              <div className="comment-box-right">
+                <h2>{comment.owner.username}</h2>
+                <p>{comment.text}</p>
+              </div>
               <br/>
             </div>
           ))

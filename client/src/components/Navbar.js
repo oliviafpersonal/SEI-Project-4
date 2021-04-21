@@ -36,9 +36,7 @@ const Navbar = () => {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">
-              Home
-            </a>
+
 
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">
