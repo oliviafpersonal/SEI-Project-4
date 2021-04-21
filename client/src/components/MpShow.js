@@ -256,7 +256,9 @@ const MpShow = () => {
         
                 </a>
         </div>
-        <Comment />
+        {userIsAuthenticated() && (
+          <Comment />
+          )}
         
       </div>
       </>
