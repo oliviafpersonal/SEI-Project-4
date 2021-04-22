@@ -112,37 +112,59 @@ const MpIndex = () => {
       <br />
       <div>
 
+        <div className="dropdown is-hoverable">
+          <div className="dropdown-trigger">
+            <button className="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Refine Your Search</span>
+              <span className="icon is-small">
+                <i className="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div className="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div className="dropdown-content">
+              <div className="dropdown-item filter-mps">
+                <button className="filter-button button" onClick={handleAll} >
+                  All
+                </button>
+              </div>
+            </div>
+ 
+             <div className="dropdown-content tory-fill">
+              <div className="dropdown-item filter-mps ">
+                <button className="filter-button button " onClick={handleTory}>
+                  Conservative
+                </button>
+              </div>
+            </div>
 
-        <div className="filter-mps">
-          <button className="filter-button button" onClick={handleAll} >
-            All
-        </button>
+            <div className="dropdown-content labour-fill">
+              <div className="dropdown-item filter-mps ">
+                <button className="filter-button button " onClick={handleLabour}>
+                  Labour
+                </button>
+              </div>
+            </div>
+
+            <div className="dropdown-content libdem-fill">
+              <div className="dropdown-item filter-mps ">
+                <button className="filter-button button " onClick={handleLibdem}>
+                  Liberal Democrats
+                </button>
+              </div>
+            </div>
+
+            <div className="dropdown-content independent-fill">
+              <div className="dropdown-item filter-mps ">
+                <button className="filter-button  button" onClick={handleIndependent}>
+                  Independent
+                </button>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-
-        <div className="filter-mps">
-          <button className="filter-button button tory-fill" onClick={handleTory}>
-            Conservative
-        </button>
-        </div>
-
-        <div className="filter-mps">
-          <button className="filter-button button labour-fill" onClick={handleLabour}>
-            Labour
-        </button>
-        </div>
-
-        <div className="filter-mps">
-          <button className="filter-button button libdem-fill" onClick={handleLibdem}>
-            Liberal Democrats
-        </button>
-        </div>
-
-        <div className="filter-mps">
-          <button className="filter-button button independent-fill" onClick={handleIndependent}>
-            Independent
-        </button>
-        </div>
 
         <div>
           {
