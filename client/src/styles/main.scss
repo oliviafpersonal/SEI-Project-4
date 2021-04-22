@@ -14,6 +14,11 @@
   box-sizing: inherit;
 }
 
+// ! navbar 
+.navbar {
+  width: 100vw;
+}
+
 body {
   height: 100vh;
   
@@ -256,25 +261,37 @@ button::-moz-focus-inner {
   opacity: 0.5;
 }
 
+.voting-wrapper {
+  margin: 15px;
+}
+ 
 .voting-section {
-
-  flex-direction: row;
+  display: flex;
+  flex-direction: column
+  ;
   flex-wrap: wrap;
-  justify-content: flex-start;
-
+  width: 100%;
+  height: 2000px;
 }
 
-.voting-history {
-  border: black 1px solid;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
 
-  margin: 5px;
-  border-radius: 15px ;
-  padding-left: 15px;
+.voting-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+  //max-height: 250px;
+  min-height: 270px;
+}
 
+
+
+.voting-card {
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  
 }
 
 //! comments on mp page
@@ -299,3 +316,4 @@ button::-moz-focus-inner {
   height: 150px;
   border-radius: 80px;
 }
+

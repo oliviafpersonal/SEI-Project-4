@@ -82,152 +82,272 @@ const MpShow = () => {
       
         <h1>Voting History:</h1>
         <br />
+        <div className="voting-wrapper">
         <div className="voting-section">
 
-          <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2020-0114/">
-            <div className="voting-history">
-              <h4><strong>Opposition Motion: Free School Meals:</strong></h4>
-              <p>{freeSchoolMeals}</p>
-            </div>
-          </a>
-
-
-
-          <a href="https://www.legislation.gov.uk/uksi/2020/882/contents/made">
-            <div className="voting-history">
-              <h4><strong>The Health Protection: Coronavirus, Wearing of Face Coverings in a Relevant Place:</strong></h4>
-              <p>{coronaFaceCoverings}</p>
-            </div>
-          </a>
-
-          <a href="https://hansard.parliament.uk/commons/2020-06-24/debates/5056F5C3-1576-40AE-BFF7-CF84BE599156/TestingOfNHSAndSocialCareStaff">
-            <div className="voting-history">
-              <h4><strong>Opposition Motion: Testing of NHS and Social Care Staff:</strong></h4>
-              <p>{testingOfNhsStaff}</p>
-            </div>
-          </a>
-
-          <a href="https://www.local.gov.uk/parliament/briefings-and-responses/police-crime-sentencing-and-courts-bill-house-commons-second">
-            <div className="voting-history">
-              <h4><strong>Police, Crime, Sentencing and Courts Bill: Second Reading:</strong></h4>
-              <p>{policeCrimeSentencing}</p>
-            </div>
-          </a>
-
-          <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8706/">
-            <div className="voting-history">
-              <h4><strong>Immigration and Social Security Co-ordination (EU Withdrawal) Bill: Second Reading:</strong></h4>
-              <p>{immigrationAndSocialSecurity}</p>
-            </div>
-          </a>
-
-          <a href="https://hansard.parliament.uk/commons/2021-01-26/debates/20CFA026-8E78-4D84-82E4-B4236D826AA4/EnvironmentBill" target='blank'> 
-            <div className="voting-history">
-              <h4><strong>Environmental Bill Report: Stage: New Clause 1:</strong></h4>
-              <p>{environmentalBill}</p>
-            </div>
-          </a>
-
-          <a href="https://bills.parliament.uk/bills/1952">
-            <div className="voting-history">
-              <h4><strong>European Union (Notification of Wtihdrawal) Bill: Second Reading:</strong></h4>
-              <p>{europeanUnionWithdrawal}</p>
-            </div>
-          </a>
-
-          <a href="https://www.theyworkforyou.com/divisions/pw-2020-07-06-73-commons">
-            <div className="voting-history">
-              <h4><strong>Domestic Abuse Bill Report Stage: New Clause 23:</strong></h4>
-              <p>{domesticAbuseBill}</p>
-            </div>
-          <a/>
-
-          <a href="https://whatson.parliament.uk/event/cal34272">
-            <div className="voting-history">
-              <h4><strong>Ten Minute Rule Motion: NHS Pay Award (Report):</strong></h4>
-              <p>{nhsPayAward}</p>
-            </div>
-          </a>
-
-          <a href="https://www.parallelparliament.co.uk/debate/commons/2020-11-04/debates/7B1D81E2-1376-4C88-AA4D-16035978BE99/AgricultureBill">
-            <div className="voting-history">
-              <h4><strong>Agriculture Bill: Lords Amendment 16B Motion to disagree:</strong></h4>
-              <p>{theAgriculturalAct}</p>
-            </div>
-          </a>
-
-          <a href="https://www.legislation.gov.uk/ukpga/2019/17/contents/enacted/data.htm">
-            <div className="voting-history">
-              <h4><strong>Offensive Weapons - Report - NC26:</strong></h4>
-              <p>{offensiveWeaponsReport}</p>
-            </div>
-          </a>
-
-          <a href="https://www.whatdotheyknow.com/request/windrush_opposition_day_motion">
-            <div className="voting-history">
-              <h4><strong>Opposition Motion: Windrush:</strong></h4>
-              <p>{windrush}</p>
-            </div>
-          </a>
-
-          <a href="https://www.theyworkforyou.com/debates/?id=2017-02-23b.1230.0">
-            <div className="voting-history">
-              <h4><strong>Unaccompanied Children in Greece and Italy:</strong></h4>
-              <p>{unaccompaniedChildren}</p>
-            </div>
-          </a>
-
-          <a href="https://www.parliament.uk/globalassets/documents/impact-assessments/IA17-010.pdf">
-            <div className="voting-history">
-              <h4><strong>International Trade and Development Agency Bill:</strong></h4>
-              <p>{tradeBill}</p>
-            </div>
-          </a>
-
-          <a href="https://publications.parliament.uk/pa/cm200203/cmbills/005/2003005.htm">
-            <div className="voting-history">
-              <h4><strong>Financial Assistance to Industry:</strong></h4>
-              <p>{financialAssistanceToIndustry}</p>
-            </div>
-          </a>
-
-          <a href="https://www.legislation.gov.uk/uksi/2020/1374/contents">
-            <div className="voting-history">
-              <h4><strong>Health Protection (Coronavirus Restrictions) (All Tiers) (England) Regulations 2020:</strong></h4>
-              <p>{healthProtection}</p>
-            </div>
-          </a>
-
-          <a href="https://www.theyworkforyou.com/debates/?id=2019-10-15c.178.5">
-            <div className="voting-history">
-              <h4><strong>Exiting the European Union (Air Quality):</strong></h4>
-              <p>{brexitAirQuality}</p>
-            </div>
-          </a>
-
-          <a href="https://bills.parliament.uk/bills/1954">
-            <div className="voting-history">
-              <h4><strong>Preventing and Combating Violence Against Women and Domestic Violence (Ratification of Convention) Bill: Third Reading:</strong></h4>
-              <p>{combatingViolenceAgainstWomen}</p>
-            </div>
-          </a>
-
-          <a href="https://www.legislation.gov.uk/ukdsi/2019/9780111181997">
-            <div className="voting-history">
-              <h4><strong>Draft Relationship Education, Relationships and Sex Education and Health Education (England) Regulations 2019:</strong></h4>
-              <p>{relationshipSexEducation}</p>
-            </div>
-          </a>
-
-          <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2017-0018/">
-            <div className="voting-history">
-              <h4><strong>Opposition Motion: Effect of the UK leaving the EU on the rural economy:</strong></h4>
-              <p>{brexitRuralEconomy}</p>
-            </div>
-          </a>
-
-        
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2020-0114/">
+                  Opposition Motion: Free School Meals:
                 </a>
+              </p>
+              <p className="subtitle">
+                {freeSchoolMeals}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.legislation.gov.uk/uksi/2020/882/contents/made/">
+                  The Health Protection: Coronavirus, Wearing of Face Coverings in a Relevant Place:
+                </a>
+              </p>
+              <p className="subtitle">
+                {coronaFaceCoverings}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://hansard.parliament.uk/commons/2020-06-24/debates/5056F5C3-1576-40AE-BFF7-CF84BE599156/TestingOfNHSAndSocialCareStaff">
+                Opposition Motion: Testing of NHS and Social Care Staff:
+                </a>
+              </p>
+              <p className="subtitle">
+              {testingOfNhsStaff}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.local.gov.uk/parliament/briefings-and-responses/police-crime-sentencing-and-courts-bill-house-commons-second">
+                  Police, Crime, Sentencing and Courts Bill: Second Reading:
+                </a>
+              </p>
+              <p className="subtitle">
+                {policeCrimeSentencing}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8706/">
+                Immigration and Social Security Co-ordination (EU Withdrawal) Bill: Second Reading:
+                </a>
+              </p>
+              <p className="subtitle">
+                {immigrationAndSocialSecurity}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://hansard.parliament.uk/commons/2021-01-26/debates/20CFA026-8E78-4D84-82E4-B4236D826AA4/EnvironmentBill" target='blank'>
+                  Environmental Bill Report: Stage: New Clause 1:
+                </a>
+              </p>
+              <p className="subtitle">
+                {environmentalBill}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://bills.parliament.uk/bills/1952" target='blank'>
+                  European Union (Notification of Wtihdrawal) Bill: Second Reading:
+                </a>
+              </p>
+              <p className="subtitle">
+                {europeanUnionWithdrawal}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.theyworkforyou.com/divisions/pw-2020-07-06-73-commons" target='blank'>
+                  Domestic Abuse Bill Report Stage: New Clause 23:
+                </a>
+              </p>
+              <p className="subtitle">
+                {domesticAbuseBill}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://whatson.parliament.uk/event/cal34272" target='blank'>
+                  Ten Minute Rule Motion: NHS Pay Award (Report):
+                </a>
+              </p>
+              <p className="subtitle">
+                {nhsPayAward}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.parallelparliament.co.uk/debate/commons/2020-11-04/debates/7B1D81E2-1376-4C88-AA4D-16035978BE99/AgricultureBill" target='blank'>
+                  Agriculture Bill: Lords Amendment 16B Motion to disagree:
+                </a>
+              </p>
+              <p className="subtitle">
+                {theAgriculturalAct}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.legislation.gov.uk/ukpga/2019/17/contents/enacted/data.htm" target='blank'>
+                  Offensive Weapons - Report - NC26:
+                </a>
+              </p>
+              <p className="subtitle">
+                {offensiveWeaponsReport}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.whatdotheyknow.com/request/windrush_opposition_day_motion" target='blank'>
+                  Opposition Motion: Windrush:
+                </a>
+              </p>
+              <p className="subtitle">
+                {windrush}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.theyworkforyou.com/debates/?id=2017-02-23b.1230.0" target='blank'>
+                  Unaccompanied Children in Greece and Italy:
+                </a>
+              </p>
+              <p className="subtitle">
+                {unaccompaniedChildren}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.parliament.uk/globalassets/documents/impact-assessments/IA17-010.pdf" target='blank'>
+                  International Trade and Development Agency Bill:
+                </a>
+              </p>
+              <p className="subtitle">
+                {tradeBill}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://publications.parliament.uk/pa/cm200203/cmbills/005/2003005.htm" target='blank'>
+                   Financial Assistance to Industry:
+                </a>
+              </p>
+              <p className="subtitle">
+               {financialAssistanceToIndustry}
+              </p>
+            </div>
+          </div>
+          
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.legislation.gov.uk/uksi/2020/1374/contents" target='blank'>
+                  Health Protection (Coronavirus Restrictions) (All Tiers) (England) Regulations 2020:
+                </a>
+              </p>
+              <p className="subtitle">
+                {healthProtection}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.theyworkforyou.com/debates/?id=2019-10-15c.178.5" target='blank'>
+                  Exiting the European Union (Air Quality):
+                </a>
+              </p>
+              <p className="subtitle">
+                {brexitAirQuality}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://bills.parliament.uk/bills/1954" target='blank'>
+                  Preventing and Combating Violence Against Women and Domestic Violence (Ratification of Convention) Bill: Third Reading:
+                </a>
+              </p>
+              <p className="subtitle">
+                {combatingViolenceAgainstWomen}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://www.legislation.gov.uk/ukdsi/2019/9780111181997" target='blank'>
+                  Draft Relationship Education, Relationships and Sex Education and Health Education (England) Regulations 2019:
+                </a>
+              </p>
+              <p className="subtitle">
+                {relationshipSexEducation}
+              </p>
+            </div>
+          </div>
+
+          <div className="card voting-card">
+            <div className="card-content">
+              <p className="title">
+                <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2017-0018/" target='blank'>
+                  Opposition Motion: Effect of the UK leaving the EU on the rural economy:
+                </a>
+              </p>
+              <p className="subtitle">
+                {brexitRuralEconomy}
+              </p>
+            </div>
+          </div>
+          
+          </div>
+        
+        
         </div>
         {userIsAuthenticated() && (
           <Comment />

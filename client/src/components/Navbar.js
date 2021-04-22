@@ -37,26 +37,6 @@ const Navbar = () => {
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
 
-            {/* 
-            <div className="navbar-item has-dropdown is-hoverable">
-              
-              <a className="navbar-link">
-                More
-              </a>
-
-              <div className="navbar-dropdown">
-
-                
-                <Link to="/about" className="navbar-item">
-                  About
-                </Link>
-                
-
-
-                <hr className="navbar-divider" />
-              </div>
-            </div>
-            */} 
           </div>
 
           {!userIsAuthenticated() && (
