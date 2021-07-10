@@ -59,3 +59,13 @@ const handleSubmit = async (event) => {
     }
   }
 ```
+
+## Challenges 
+I knew from the get go that working on this project alone was going to be a challenge, but one I wanted to prove to myself that I could do. Whilst working on the backend, I struggled getting the comment serializer to work, after allowing a fresh set of eyes to look at the code, I found a simple spelling mistake was the reason for the code breaking. 
+
+Seeding the data took a long time, exacerbating the motivations behind my choice of theme for this project. 
+
+
+## Wins
+
+## Bugs
