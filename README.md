@@ -67,5 +67,6 @@ Seeding the data took a long time, exacerbating the motivations behind my choice
 
 
 ## Wins
-
-## Bugs
+Finishing the General Assembly Software Engineering course on a solo project was definitely a win. 
+I had much more hands on experience building out the backend in this project than my last group project. This has meant I have learnt a lot more about Python and backend models and relationships. 
+Managing my own time and expectations for what I could get done within the 8 day time frame also proved to be a great learning experience.
