@@ -23,3 +23,20 @@ react-router-dom
 I decided to base my project on the fact that the government's website is not the most user friendly and hard to navigate. I also believe there is a gap in the education system that politics needs to fill. 
 
 I started by building out my entire back end, with my models, views and serialisers. I spent the first two days of the project ensuring the relationships were all working allowing my functionality to be seamless. Insomnia REST Client was a very useful tool at this stage of the project, allowing me to regularly check my code was running smoothly. 
+
+``` python
+class Comment(models.Model):
+    text = models.TextField(max_length=300)
+    created_at = models.DateTimeField(auto_now_add=True)
+    mp = models.ForeignKey(
+        "mp.Mp",
+        related_name="comments",
+        on_delete= models.CASCADE
+    )
+
+    owner = models.ForeignKey(
+        "jwt_auth.User",
+        related_name="comments",
+        on_delete= models.CASCADE
+    )
+```
