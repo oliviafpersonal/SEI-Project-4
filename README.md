@@ -7,3 +7,14 @@ Deployed project:
 ## Overview and Timeframe
 This was an 8 day project with the goal of building out a full-stack application whilst creating my own front and back end. I used Python Django API using Django REST Framework to serve my data from a Postgres database. The end product needed to contain multiple relationships and CRUD functionality. 
 
+## Technologies Used:
+Django 
+Django REST Framework 
+PostgreSQL
+JavaScript (ES6)
+React.js
+HTML
+CSS
+Bulma
+Axios
+react-router-dom
