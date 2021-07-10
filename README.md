@@ -40,3 +40,22 @@ class Comment(models.Model):
         on_delete= models.CASCADE
     )
 ```
+
+Once I was happy that my backend was complete, I added a frontend and began building it out using React.js. I focused on an Index page, a show page, register, log in and out functionality and a basic profile page. Once the user was logged in, they had the option of leaving a comment, under an MP's profile of choice. 
+
+```Javascript 
+const handleSubmit = async (event) => {
+    console.log(formData)
+    try {
+      const response = await axios.post('/api/comments/', formData, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      console.log(response)
+      history.push(`/mps/${id}`)
+    } catch (err) {
+      console.log(err.message)
+    }
+  }
+```
